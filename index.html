@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust + Wasm Example</title>
+</head>
+<body>
+    <script type="module">
+        import init, { format_rust_code } from "./pkg/rustfmt_wasm.js";
+
+        async function run() {
+        await init();
+
+        const code = `
+        struct  Foo {
+        bar: i32,
+        baz: i32,
+        }
+        fn main() {
+        println!("Hello, world!");
+                    }
+        `;
+
+        try {
+            const formattedCode = format_rust_code(code);
+            console.log("Formatted code:\n", formattedCode);
+            document.body.innerHTML = `<h1>${formattedCode}</h1>`;
+        } catch (e) {
+            console.error("Error formatting code:", e);
+        }
+        }
+
+        run();
+    </script>
+</body>
+</html>

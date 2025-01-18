@@ -5,7 +5,7 @@ edition = "2021"
 description = "A simple Rust and WebAssembly program."
 authors = ["Rasoul Hesami Rostami <h.rostami.r@gmail.com>"]
 license = "MIT"
-repository = "https://github.com/RAsoul678/rust-wasm"
+repository = "https://github.com/Rasoul678/rustfmt-wasm"
 
 [lib]
 crate-type = ["cdylib"]

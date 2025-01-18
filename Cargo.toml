@@ -1,0 +1,16 @@
+[package]
+name = "rustfmt-wasm"
+version = "0.3.0"
+edition = "2021"
+description = "A simple Rust and WebAssembly program."
+authors = ["Rasoul Hesami Rostami <h.rostami.r@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/RAsoul678/rust-wasm"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.100"
+prettyplease = "0.2"
+syn = "2.0"
